@@ -1,0 +1,2 @@
+class ShoeSize < ApplicationRecord
+end
