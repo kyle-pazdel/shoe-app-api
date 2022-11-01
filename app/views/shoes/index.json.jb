@@ -5,6 +5,7 @@
     style: shoe.style,
     description: shoe.description,
     image: shoe.image,
+    sizes: shoe.sizes.all,
     created_at: shoe.created_at,
     updated_at: shoe.updated_at,
   }
