@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/shoes" => "shoes#index"
+  get "/shoes/:id" => "shoes#show"
 end

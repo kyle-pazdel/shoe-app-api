@@ -1,3 +1,5 @@
 ### Index Request
-
 GET http://localhost:3000/shoes
+
+### Show Request
+GET http://localhost:3000/shoes/1
