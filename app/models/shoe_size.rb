@@ -1,4 +1,4 @@
 class ShoeSize < ApplicationRecord
-  belongs_to :shoes
-  belongs_to :sizes
+  belongs_to :shoe
+  belongs_to :size
 end

@@ -17,3 +17,13 @@ Shoe.create(name: "Pointed Toe Shoe", color: "red", style: "stilleto", descripti
 Shoe.create(name: "Beach Heel", color: "beige", style: "wedge", description: "A fun and flirty casual heel, perfect for any occasion.", image: "https://images.dsw.com/is/image/DSWShoes/525807_252_ss_01?impolicy=qlt-medium-high&imwidth=640&imdensity=2")
 
 Shoe.create(name: "Chunky-Heeled Boot", color: "Brown", style: "boot", description: "Look good and get the job done!", image: "https://images.dsw.com/is/image/DSWShoes/510037_231_ss_01?impolicy=qlt-medium-high&imwidth=640&imdensity=2")
+
+i = 1
+while i <= Shoe.all.length + 1
+  i2 = 1
+  while i2 <= Size.all.length + 1
+    ShoeSize.create(shoe_id: i, size_id: i2)
+    i2 += 1
+  end
+  i += 1
+end
