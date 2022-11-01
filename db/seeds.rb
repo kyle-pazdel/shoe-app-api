@@ -11,3 +11,7 @@ while i <= 12
   Size.create(number: i)
   i += 1
 end
+
+Shoe.create(name: "Pointed Toe Shoe", color: "red", style: "stilleto", description: "A fun and fancy 5 1/2 inch heel for some fun and class")
+
+Shoe.create(name)
