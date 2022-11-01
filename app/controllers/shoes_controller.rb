@@ -6,8 +6,8 @@ class ShoesController < ApplicationController
   end
 
   def show
-    @shoe = Shoe.find_by(params[:id])
+    @shoe = Shoe.find_by(id: params[:id])
 
-    render json: { message: "It works!" }
+    render template: "shoes/show"
   end
 end

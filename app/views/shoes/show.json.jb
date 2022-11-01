@@ -1,0 +1,9 @@
+{
+  name: @shoe.name,
+  color: @shoe.color,
+  style: @shoe.style,
+  description: @shoe.description,
+  image: @shoe.image,
+  created_at: @shoe.created_at,
+  updated_at: @shoe.updated_at,
+}
