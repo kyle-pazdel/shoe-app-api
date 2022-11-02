@@ -1,5 +1,6 @@
 @shoes.map do |shoe|
   {
+    id: shoe.id,
     name: shoe.name,
     color: shoe.color,
     style: shoe.style,

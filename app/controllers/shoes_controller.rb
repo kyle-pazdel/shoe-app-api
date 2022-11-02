@@ -34,6 +34,12 @@ class ShoesController < ApplicationController
     render template: "shoes/show"
   end
 
+  def destroy
+    @shoe = Shoe.find_by(id: params[:id])
+    @shoe.destroy
+    render json: { message: "Shoe Destroyed!" }
+  end
+
   private
 
   def shoe_params

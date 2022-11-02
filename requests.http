@@ -23,3 +23,6 @@ Content-Type: application/json
 {
   "name": "Super Fun Shoe"
 }
+
+### Destroy Request
+DELETE http://localhost:3000/shoes/5.json
