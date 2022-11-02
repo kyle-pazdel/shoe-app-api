@@ -3,3 +3,15 @@ GET http://localhost:3000/shoes.json
 
 ### Show Request
 GET http://localhost:3000/shoes/1.json
+
+### Test Request
+POST http://localhost:3000/shoes.json
+Content-Type: application/json
+
+{
+  "name": "Test", 
+  "color": "Test",
+  "style": "Test",
+  "description": "Test",
+  "image": "https://www.pngitem.com/pimgs/m/39-392019_gym-shoes-clipart-animated-hd-png-download.png"
+}

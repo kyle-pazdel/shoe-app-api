@@ -10,4 +10,22 @@ class ShoesController < ApplicationController
 
     render template: "shoes/show"
   end
+
+  def create
+    @shoe = Shoe.new(shoe_params)
+    if @shoe.save
+      i = 1
+      8.times do
+        ShoeSize.create(shoe_id: @shoe.id, size_id: i)
+        i += 1
+      end
+    end
+    render template: "shoes/show"
+  end
+
+  private
+
+  def shoe_params
+    params.require(:shoe).permit(:name, :color, :style, :description, :image)
+  end
 end
