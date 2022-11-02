@@ -24,11 +24,13 @@ class ShoesController < ApplicationController
   end
 
   def update
-    @shoe.name = shoe.name || params[:name]
-    @shoe.color = shoe.color || params[:color]
-    @shoe.style = shoe.style || params[:style]
-    @shoe.description = shoe.description || params[:description]
-    @shoe.image = shoe.image || params[:image]
+    @shoe = Shoe.find_by(id: params[:id])
+    @shoe.name = params[:name] || @shoe.name
+    @shoe.color = params[:color] || @shoe.color
+    @shoe.style = params[:style] || @shoe.style
+    @shoe.description = params[:description] || @shoe.description
+    @shoe.image = params[:image] || @shoe.image
+    @shoe.save
     render template: "shoes/show"
   end
 

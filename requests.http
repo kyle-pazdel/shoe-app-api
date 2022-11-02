@@ -4,7 +4,7 @@ GET http://localhost:3000/shoes.json
 ### Show Request
 GET http://localhost:3000/shoes/1.json
 
-### Test Request
+### Create Request
 POST http://localhost:3000/shoes.json
 Content-Type: application/json
 
@@ -14,4 +14,12 @@ Content-Type: application/json
   "style": "Test",
   "description": "Test",
   "image": "https://www.pngitem.com/pimgs/m/39-392019_gym-shoes-clipart-animated-hd-png-download.png"
+}
+
+### Update Request
+PATCH http://localhost:3000/shoes/4.json
+Content-Type: application/json
+
+{
+  "name": "Super Fun Shoe"
 }
