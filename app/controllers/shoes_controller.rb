@@ -23,6 +23,15 @@ class ShoesController < ApplicationController
     render template: "shoes/show"
   end
 
+  def update
+    @shoe.name = shoe.name || params[:name]
+    @shoe.color = shoe.color || params[:color]
+    @shoe.style = shoe.style || params[:style]
+    @shoe.description = shoe.description || params[:description]
+    @shoe.image = shoe.image || params[:image]
+    render template: "shoes/show"
+  end
+
   private
 
   def shoe_params
