@@ -12,7 +12,7 @@ class ShoesController < ApplicationController
   end
 
   def create
-    @shoe = Shoe.new(shoe_params)
+    @shoe = Shoe.new(name: params[:name], color: params[:color], style: params[:style], description: params[:description], image: params[:image])
     if @shoe.save
       i = 1
       8.times do
@@ -38,11 +38,5 @@ class ShoesController < ApplicationController
     @shoe = Shoe.find_by(id: params[:id])
     @shoe.destroy
     render json: { message: "Shoe Destroyed!" }
-  end
-
-  private
-
-  def shoe_params
-    params.require(:shoe).permit(:name, :color, :style, :description, :image)
   end
 end
